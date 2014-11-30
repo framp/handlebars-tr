@@ -1,0 +1,35 @@
+{
+  "name": "handlebars-tr",
+  "version": "0.0.1",
+  "description": "Simple helper to render translated template",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/framp/handlebars-tr"
+  },
+  "keywords": [
+    "translate",
+    "handlebars",
+    "tr",
+    "i18n",
+    "sprintf",
+    "compile",
+    "template"
+  ],
+  "author": {
+    "name": "Federico Rampazzo",
+    "email": "frampone@gmail.com",
+    "url": "http://framp.me"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/framp/handlebars-tr/issues"
+  },
+  "homepage": "https://github.com/framp/handlebars-tr",
+  "devDependencies": {
+    "handlebars": "^2.0.0"
+  }
+}
