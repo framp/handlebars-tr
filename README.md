@@ -11,10 +11,13 @@ A simple helper to translate strings in handlebars.
     var template = Handlebars.compile('{{tr "Test"}}');
     var data = {
       __language: {
-        Test: "TestTranslation"
+        Test: 'TestTranslation{{magic}}'
       }
+      magic: 'Magic'
     };
     console.log(template(data));
+
+This helper actually compile the strings in `__language` as handlebars template, passing all the data available to the root context.
 
 ##License
 MIT
