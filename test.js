@@ -38,3 +38,23 @@ it('should render a handlebars template for each variable', function (cb) {
   assert.equal(template(data), 'TestTranslationMagic');
   cb();
 });
+
+it('should render a missing tr surrounded by ***', function (cb) {
+  var handlebarsTr = require('./index')();
+  var template = Handlebars.compile('{{tr "Test"}}');
+  var data = {
+    __language: {
+      
+    }
+  }
+  assert.equal(template(data), '***Test***');
+  cb();
+});
+
+it('should render support custom characters', function (cb) {
+  var handlebarsTr = require('./index')(null, null, '___');
+  var template = Handlebars.compile('{{tr "Test"}}');
+  var data = {}
+  assert.equal(template(data), '___Test___');
+  cb();
+});
